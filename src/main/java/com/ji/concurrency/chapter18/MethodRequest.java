@@ -1,0 +1,20 @@
+package com.ji.concurrency.chapter18;/*
+    user ji
+    data 2019/3/13
+    time 8:46 PM
+*/
+/*
+对应activeObject 每一个方法
+ */
+
+public abstract class MethodRequest {
+    protected  final Servant servant;
+    protected final FutureResult futureResult;
+
+    protected MethodRequest(Servant servant, FutureResult futureResult) {
+        this.servant = servant;
+        this.futureResult = futureResult;
+    }
+
+    public abstract void execute();
+}
